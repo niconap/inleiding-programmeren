@@ -1,0 +1,50 @@
+ . . . compare two s t r i n g s
+help print t h i s text
+l i s t print database
+read . . . read from f i l e and add to database
+remove . . . remove from database
+r e t r i e v e . . . find in database
+s i z e print number of items in database
+quit stop
+console > s i z e
+0 items in database
+console > l i s t
+Database i s empty
+console > add acgt
+" acgt " added to database
+console > add agtc
+" agtc " added to database
+console > add CATG
+" catg " added to database
+console > s i z e
+3 items in database
+console > l i s t
+acgt
+agtc
+catg
+console > add acgt
+" acgt " not added ; already in database
+console > remove acgt
+" acgt " removed from database
+console > l i s t
+agtc
+catg
+console > remove acgt
+" acgt " not removed ; not in database
+console > remove agtc
+" agtc " removed from database
+console > remove catg
+" catg " removed from database
+console > r e t r i e v e cat
+No match found ; database i s empty
+console > read input . txt
+"dog" added to database
+" horse " added to database
+" cat " added to database
+" frog " added to database
+console > l i s t
+dog
+horse
+cat
+frog
+3

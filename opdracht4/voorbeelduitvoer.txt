@@ -1,0 +1,93 @@
+$ ./opdracht4
+Welcome to DNA Matcher v0.2
+console> help
+LIST OF COMMANDS
+  add ...          add to database
+  compare ... ...  compare two strings
+  help             print this text
+  list             print database
+  read ...         read from file and add to database
+  remove ...       remove from database
+  retrieve ...     find in database
+  size             print number of items in database
+  quit             stop
+console> size
+0 items in database
+console> list
+Database is empty
+console> add acgt
+"acgt" added to database
+console> add agtc
+"agtc" added to database
+console> add CATG
+"catg" added to database
+console> size
+3 items in database
+console> list
+acgt
+agtc
+catg
+console> add acgt
+"acgt" not added; already in database
+console> remove acgt
+"acgt" removed from database
+console> list
+agtc
+catg
+console> remove acgt
+"acgt" not removed; not in database
+console> remove agtc
+"agtc" removed from database
+console> remove catg
+"catg" removed from database
+console> retrieve cat
+No match found; database is empty
+console> read input.txt
+"dog" added to database
+"horse" added to database
+"cat" added to database
+"frog" added to database
+console> list
+dog
+horse
+cat
+frog
+console> retrieve cat
+Perfect match found; "cat" is in database
+console> retrieve duck
+No perfect match found; "duck" is not in database
+Best matches:
+Distance        String
+3               dog
+4               cat
+4               frog
+console> read test.txt
+"test.txt" not found
+console> compare quacker jack
+0 1 2 3 4
+1 1 2 3 4
+2 2 2 3 4
+3 3 2 3 4
+4 4 3 2 3
+5 5 4 3 2
+6 6 5 4 3
+7 7 6 5 4
+Difference = 4
+console> compare cat BAT
+0 1 2 3
+1 1 2 3
+2 2 1 2
+3 3 2 1
+Difference = 1
+console> add
+Please enter a valid command
+console> add abc def
+Please enter a valid command
+console> cookie
+Please enter a valid command
+
+...
+
+console> add gtca
+"gtca" not added; database is full
+console> quit
